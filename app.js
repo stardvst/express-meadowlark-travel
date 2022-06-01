@@ -1,7 +1,6 @@
 const express = require('express');
 const expressHandlebars = require('express-handlebars');
-const fortune = require('./lib/fortune.js');
-const handlers = require('./lib/handlers.js');
+const handlers = require('./lib/handlers');
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -13,7 +12,7 @@ app.get('/', handlers.home);
 
 app.get('/about', handlers.about);
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(`${__dirname}/public`));
 
 app.use(handlers.notFound);
 
