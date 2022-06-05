@@ -6,13 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meadowlark Travel</title>
+  {{{_sections.head}}}
 </head>
 
 <body>
-  <header>
-    <img src="/img/logo.png" alt="Logo">
-  </header>
-  {{{body}}}
+  <div class="container">
+    <header>
+      <div class="container">
+        <img src="/img/logo.png" alt="Logo">
+      </div>
+    </header>
+  </div>
+  <div class="container">
+    {{{body}}}
+    {{{_sections.script}}}
+  </div>
+  <footer>&copy; Meadowlark Travel</footer>
 </body>
 
 </html>
